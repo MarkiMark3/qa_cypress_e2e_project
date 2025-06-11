@@ -12,8 +12,8 @@ describe('Sign Up page', () => {
     cy.task('db:clear');
     cy.task('generateUser').then((generateUser) => {
       user = generateUser;
+      singUpPage.visit();
     });
-    singUpPage.visit();
   });
 
   it('should sign up', () => {
